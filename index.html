@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <title>BusAzur</title>
 <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0077b6">
+<meta name="theme-color" content="#0077b6">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.12.0/maplibre-gl.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -299,20 +299,6 @@
     #fab-stack{ bottom:16px; }
   }
 </style>
-<script>
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-        navigator.serviceWorker
-            .register("./service-worker.js")
-            .then(() => {
-                console.log("BusAzur PWA : Service Worker enregistré");
-            })
-            .catch((error) => {
-                console.error("Erreur Service Worker :", error);
-            });
-    });
-}
-</script>
 </head>
 <body>
 <div id="app">
@@ -1135,6 +1121,20 @@ async function boot(){
 boot();
 
 })();
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker
+            .register("./service-worker.js")
+            .then(() => {
+                console.log("BusAzur PWA : Service Worker enregistré");
+            })
+            .catch((error) => {
+                console.error("Erreur Service Worker :", error);
+            });
+    });
+}
 </script>
 </body>
 </html>
